@@ -49,5 +49,5 @@ Ran sudo netstat -tuln | grep :8080 to check, port 8080 is not in use.
 missing resources directory, created this in ```src```, added in application.properties file. 
 Cleaned up my pom.xml to remove optional dependencies to see if that fixed the issue.
 Added in missing spring boot plugin section to pom.xml.
-Ran ```mvn clean install -U```, build success, but spring-boot:run still failing.
+Ran ```mvn clean install -U```, build success, but mvnspring-boot:run still failing.
 
