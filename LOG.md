@@ -51,3 +51,13 @@ Cleaned up my pom.xml to remove optional dependencies to see if that fixed the i
 Added in missing spring boot plugin section to pom.xml.
 Ran ```mvn clean install -U```, build success, but mvnspring-boot:run still failing.
 
+Trying to run the application JAR directly: ```mvn clean package```, then ```java -jar target/myproject-0.0.1-SNAPSHOT.jar```
+Nope, still failing on the run.
+
+Ok finally found the issue! Looks like my project file structure wasn't set up correctly.
+The Application class in MyApp.java can't be in the default package at the root of src/main/java.
+So I added the com/example/myproject path and nexted MyApp.java there (thank you chatGPT).
+I included the package declaration at the top of MyApp.java to ensure it was not part of the default package.
+This also helps Spring Boot's component scanning pick up my application class, as the @ApringBootApplication annotation is typically used in a class that resides in a top-level package.
+
+
