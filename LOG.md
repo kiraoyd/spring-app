@@ -160,6 +160,9 @@ Declare package.
 Import statements.
 Apply ```@Entity``` attribute and ```@Table(name = "characters)``` attribute for table mapping.
 
+
+# RETURN HERE: Stopped at setting up the schema-postgres.sql file
+
 ### BUILD REPOSITORY INTERFACES
 
 Add ```spring-boot-starter-data-jpa``` to the pom.xml to allow use for the Spring Data JPA.
