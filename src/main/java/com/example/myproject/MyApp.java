@@ -1,4 +1,4 @@
-package com.example.myproject;
+package com.example.myproject; //specify which package this class is part of
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 //stereotype annocation - specify class role to Spring (web REST app)
 @RestController
 //meta-annotation - sets Spring to guess how to configure itself based on the jar dependencies
+// bootstraps application as an entry point
 @SpringBootApplication
 public class MyApp {
 
